@@ -13,7 +13,7 @@ body{
 }
 
 .hero{
-    background-image: linear-gradient(to top,#36393e,transparent), url(/imagens/back.gif);;
+    background-image: linear-gradient(to top,#36393e,transparent), url(https://github.com/ArthR1beiro/ArthurPortfolio/blob/main/imagens/back.gif?raw=true);
     height: 500px;
     background-position: left center;
     background-repeat: no-repeat;
