@@ -19,10 +19,10 @@ Spacing system (px)
 
 html{
     font-size: 62.5%;
+    font-family: 'Roboto Slab',Arial, Helvetica, sans-serif;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
     background-color: hsl(206deg 67% 9%);
     margin: 0;
@@ -31,13 +31,14 @@ body{
 
 h1{
     font-size: 2rem;
+    margin: 2rem 0;
 }
 p{
     font-size: 1.6rem;
 }
 
 .background{
-    height: 100rem;
+    
     background-image: linear-gradient(
         0deg,
         hsl(206deg 100% 5%) 0%,
@@ -56,7 +57,7 @@ p{
       background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2300fbff' fill-opacity='0.08'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.vidro{
+.grid-conteiner{
         /* From https://css.glass */
     background: rgba(20, 36, 65, 0.315);
     box-shadow: 0 .4rem 3rem rgba(0, 0, 0, 0);
@@ -65,7 +66,33 @@ p{
     border: 0.1rem solid rgba(54, 57, 62, 0.63);
     border-radius: 5rem;
     padding: 1.5rem;
-    
+
+    /* GRID */
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+
+
+    grid-template-areas: 
+    'about     about      curriculo'
+    'knowledge knowledge  curriculo'
+    'footer    footer     footer';
+}
+
+.griditem{
+    padding: 1.5rem;
+}
+
+.vidro{
+    /* From https://css.glass */
+background: rgba(20, 36, 65, 0.315);
+box-shadow: 0 .4rem 3rem rgba(0, 0, 0, 0);
+backdrop-filter: blur(.2rem);
+-webkit-backdrop-filter: blur(1rem);
+border: 0.1rem solid rgba(54, 57, 62, 0.63);
+border-radius: 5rem;
+padding: 1.5rem;
 }
 
 .hero{
@@ -85,7 +112,7 @@ p{
 }
 
 .img-perfil{
-    height: 20rem;
+    height: 23rem;
     float: left;
     margin: 0 2rem 0 0;
     border-radius: 50%;
@@ -93,21 +120,27 @@ p{
 }
 .about{
   text-align: left;
-  margin: 0 35% 0 0;
   overflow: auto;
+  grid-area: about;
 }
 .about h1, p, a{
-    margin-bottom: 2rem;
+    margin-top: 1;
     color: white;
     text-decoration: none;
 }
 
-.about article{
-    max-width: 120rem;
-    margin: 0 auto;
+.curriculo{
+    text-align: left;
+    overflow: auto;
+    grid-area: curriculo;
 }
 
-footer{
-    /* background-color: #282b30; */
+.knowledge{
+    grid-area: knowledge;
+}
+
+
+.footer{
     text-align: center;
+    grid-area: footer;
 }
