@@ -1,42 +1,113 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+/*
+
+----- Typography system -----
+Font size system (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+----- Whitespace -----
+Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+----- Colors -----
+- Primary:
+- Tint:
+- Shade:
+- Background:
+- Background tint:
+
+*/
+
+html{
+    font-size: 62.5%;
+}
 
 body{
-    background-color: 	#36393e;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    background-color: hsl(206deg 67% 9%);
     margin: 0;
     padding: 0;
+}
+
+h1{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.6rem;
+}
+
+.background{
+    height: 100rem;
+    background-image: linear-gradient(
+        0deg,
+        hsl(206deg 100% 5%) 0%,
+        hsl(206deg 93% 6%) 19%,
+        hsl(206deg 88% 6%) 27%,
+        hsl(206deg 83% 7%) 34%,
+        hsl(206deg 80% 7%) 41%,
+        hsl(206deg 76% 7%) 47%,
+        hsl(206deg 74% 8%) 53%,
+        hsl(206deg 72% 8%) 59%,
+        hsl(206deg 70% 8%) 66%,
+        hsl(206deg 68% 9%) 73%,
+        hsl(206deg 67% 9%) 81%,
+        hsl(206deg 67% 9%) 100%
+      );
+      background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2300fbff' fill-opacity='0.08'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.vidro{
+        /* From https://css.glass */
+    background: rgba(20, 36, 65, 0.315);
+    box-shadow: 0 .4rem 3rem rgba(0, 0, 0, 0);
+    backdrop-filter: blur(.2rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border: 0.1rem solid rgba(54, 57, 62, 0.63);
+    border-radius: 5rem;
+    padding: 1.5rem;
+    
 }
 
 .hero{
-    background-image: linear-gradient(to top,#36393e,transparent), url(/imagens/back.gif);;
-    height: 500px;
+    background-image: linear-gradient(to top,hsl(206deg 67% 9%) 0%,transparent 100%), url(https://github.com/ArthR1beiro/ArthurPortfolio/blob/main/imagens/back.gif?raw=true);
+    height: 50rem;
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1{
+     font-size: 5rem;
+     text-align: center;
 }
 
 .img-perfil{
-    height: 200px;
+    height: 20rem;
     float: left;
-    margin: 0 20px 0 0;
+    margin: 0 2rem 0 0;
     border-radius: 50%;
-    box-shadow: -10px 5px 20px 5px #282b30;
+
 }
 .about{
   text-align: left;
-  margin: 20px 750px 0px 20px;
+  margin: 0 35% 0 0;
+  overflow: auto;
 }
-.about h1, p{
-    margin-bottom: 20px;
+.about h1, p, a{
+    margin-bottom: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.about article{
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 footer{
-    background-color: #282b30;
+    /* background-color: #282b30; */
     text-align: center;
 }
