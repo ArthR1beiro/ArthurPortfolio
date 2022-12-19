@@ -68,21 +68,14 @@ p {
 
   /* GRID */
   display: grid;
-  grid-template-rows: 3fr 2fr 3fr 3fr 1fr;
+  grid-template-rows: 34rem 19rem 30rem 30rem 10rem;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
 
-  /* grid-template-areas: 
-    'about        about         knowledge'
-    'certificados certificados  curriculo'
-    'design       design        curriculo'
-    'arts         arts          logo   '
-    'footer       footer        footer   '; */
-
   grid-template-areas:
     "about        about         curriculo"
-    "certificados certificados  curriculo"
-    "knowledge    design        design"
+    "knowledge    knowledge     curriculo"
+    "certificates design        design"
     "arts         arts          logo   "
     "footer       footer        footer   ";
 }
@@ -150,6 +143,48 @@ a {
   grid-area: knowledge;
 }
 
+.icons-conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  left: 50%;
+  bottom: -2rem;
+  transform: translate(-50%, 1.5rem);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0rem);
+}
+
+.knowledge img {
+  padding: 0 1rem;
+  width: 8rem;
+}
+
 .curriculo {
   text-align: left;
   overflow: auto;
@@ -161,8 +196,8 @@ a {
   border-radius: 1rem;
 }
 
-.certificados {
-  grid-area: certificados;
+.certificates {
+  grid-area: certificates;
 }
 
 .design {
