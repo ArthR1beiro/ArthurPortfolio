@@ -139,8 +139,28 @@ a {
   text-decoration: none;
 }
 
+.curriculo {
+  text-align: left;
+  overflow: auto;
+  grid-area: curriculo;
+}
+
+.curriculo img {
+  width: 100%;
+  border-radius: 1rem;
+  transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: scale(1);
+}
+
+.curriculo img:hover {
+  transform: scale(1.05);
+}
+
 .knowledge {
   grid-area: knowledge;
+}
+.knowledge h1 {
+  margin-bottom: 1.5rem;
 }
 
 .icons-conteiner {
@@ -152,24 +172,24 @@ a {
 .tooltip {
   position: relative;
   display: inline-block;
-  background-color: transparent;
-  border: none;
+  width: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tooltiptext {
   visibility: hidden;
   opacity: 0;
-  width: 120px;
-  left: 50%;
   bottom: -2rem;
+  left: 50%;
   transform: translate(-50%, 1.5rem);
   color: white;
-  text-align: center;
-  padding: 0.5rem 0;
+  background: rgba(26, 84, 192, 0.315);
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
   font-weight: bold;
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  /* Position the tooltip */
   position: absolute;
   z-index: 1;
 }
@@ -177,23 +197,17 @@ a {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-  transform: translate(-50%, 0rem);
+  transform: translate(-50%, 1rem);
 }
 
-.knowledge img {
-  padding: 0 1rem;
+.icons-conteiner img {
   width: 8rem;
+  height: 8rem;
+  transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.curriculo {
-  text-align: left;
-  overflow: auto;
-  grid-area: curriculo;
-}
-
-.curriculo img {
-  width: 100%;
-  border-radius: 1rem;
+.icons-conteiner img:hover {
+  transform: scale(1.2);
 }
 
 .certificates {
