@@ -60,10 +60,12 @@ p {
   background: rgba(20, 36, 65, 0.315);
   box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0);
   backdrop-filter: blur(0.2rem);
-  -webkit-backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(0.2rem);
   border: 0.1rem solid rgba(54, 57, 62, 0.63);
   border-radius: 5rem;
   padding: 2rem;
+  max-width: 136rem;
+  margin: 0 auto;
 }
 .grid-conteiner1 {
   /* GRID */
