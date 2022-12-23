@@ -64,7 +64,7 @@ p {
   border: 0.1rem solid rgba(54, 57, 62, 0.63);
   border-radius: 5rem;
   padding: 2rem;
-  max-width: 127rem;
+  max-width: 128rem;
   margin: 0 auto;
 }
 .grid-conteiner1 {
@@ -83,24 +83,23 @@ p {
 .grid-conteiner2 {
   /* GRID */
   display: grid;
-  grid-template-rows: 30rem /* 30rem 10rem; */;
+  grid-template-rows: 35rem /* 30rem 10rem; */;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   margin-bottom: 2em;
 
-  grid-template-areas: "certificates projects";
+  grid-template-areas: "projects arts";
 }
 
 .grid-conteiner3 {
   /* GRID */
   display: grid;
-  grid-template-rows: 30rem 30rem 10rem /* 30rem 10rem; */;
+  grid-template-rows: 35rem 10rem /* 30rem 10rem; */;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
 
   grid-template-areas:
-    "design design design"
-    "arts   arts   logo"
+    "design contact logo"
     "footer footer footer";
 }
 
@@ -227,14 +226,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* z-index: 1; */
 }
 
 .icons-conteiner img {
   width: 8rem;
   height: 8rem;
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-  /* z-index: 1; */
 }
 
 .icons-conteiner img:hover {
@@ -272,20 +269,57 @@ a {
   transform: translate(-50%, 1.8rem);
 }
 
-.certificates {
-  grid-area: certificates;
-}
-
 .projects {
   grid-area: projects;
+}
+
+.arts {
+  grid-area: arts;
 }
 
 .design {
   grid-area: design;
 }
 
-.arts {
-  grid-area: arts;
+.conteiner-slider {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.conteiner-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+  height: 25rem;
+}
+
+.slider {
+  opacity: 0;
+  transition: opacity 0.8s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  transition: opacity 1s;
+}
+
+.on {
+  opacity: 1;
+}
+
+#prev-button,
+#next-button {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+}
+.contact {
+  grid-area: contact;
 }
 
 .logo {
