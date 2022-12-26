@@ -197,9 +197,6 @@ a {
   grid-area: curriculo;
 }
 
-.curriculo a {
-}
-
 .curriculo img {
   width: 100%;
   border-radius: 1rem;
@@ -288,7 +285,7 @@ a {
   width: 100%;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  justify-content: space-evenly;
 }
 .conteiner-images {
   position: relative;
@@ -320,13 +317,19 @@ a {
   border: none;
   cursor: pointer;
   /* opacity: 0.5; */
-  transition: fill 1s;
+  transition: fill 1s, transform 0.5s;
   background: transparent;
-  fill: aqua;
+}
+
+#prev-button:hover {
+  transform: scale(-1.5);
+}
+#next-button:hover {
+  transform: scale(1.5);
 }
 
 #prev-button {
-  transform: scale(-1);
+  transform: rotate(180deg);
 }
 
 #carousel-back {
@@ -340,9 +343,18 @@ a {
 .contact {
   grid-area: contact;
 }
-.pão {
-  color: rgba(189, 57, 57, 0.315);
+.contact-conteiner {
 }
+.contact svg {
+  height: 3.5rem;
+  fill: aqua;
+}
+.contact a {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
 .logo {
   grid-area: logo;
   background: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2300fbff' fill-opacity='0.08'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
