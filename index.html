@@ -16,7 +16,6 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
-    <script src="/scriptslider.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
@@ -27,7 +26,7 @@
 
   <body>
     <section class="hero">
-      <h1>eai galerinha da live</h1>
+      <h1>I Want to be painless<br />Love soldier</h1>
     </section>
 
     <section class="background">
@@ -135,18 +134,24 @@
         </div>
 
         <div class="grid-conteiner3">
-          <div class="design vidro grid-item card">
+          <div class="design vidro grid-item card" id="carousel-back">
             <h1>Designs</h1>
             <div class="conteiner-slider">
-              <button id="prev-button"></button>
+              <button class="button-design" id="prev-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+                  />
+                </svg>
+              </button>
               <div class="conteiner-images">
                 <img
                   src="/imagens/design/xmasdinner.png"
                   alt="Christmas dinner invitation"
-                  class="slider on"
+                  class="slider"
                 />
                 <img
-                  src="/imagens/design/womensday.png"
+                  src="/imagens/design/womenday.png"
                   alt="Women's day invitation"
                   class="slider"
                 />
@@ -171,7 +176,13 @@
                   class="slider"
                 />
               </div>
-              <button id="next-button"></button>
+              <button class="button-design" id="next-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
 
@@ -200,4 +211,5 @@
     </section>
   </body>
   <script src="./script.js"></script>
+  <script src="/scriptslider.js" defer></script>
 </html>
