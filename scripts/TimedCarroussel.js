@@ -1,7 +1,7 @@
 const shifterText = document.querySelectorAll(".text-hero");
 const shifterRef = document.querySelectorAll(".ref-hero");
 
-let currentText = 3;
+let currentText = 0;
 
 shifterText[currentText].classList.add("text-hero-on");
 
@@ -22,7 +22,7 @@ setInterval(function () {
   showText();
 }, 5000);
 
-let currentRef = 3;
+let currentRef = 0;
 
 shifterRef[currentRef].classList.add("ref-hero-on");
 
