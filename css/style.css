@@ -159,13 +159,47 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  position: relative;
 }
 
-.hero h1 {
+.hero > div {
+  position: absolute;
+}
+.text-hero {
+  opacity: 0;
+  transition: opacity 0.5s, scale 1s;
   font-size: 5rem;
   text-align: center;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  scale: 0.5;
+}
+
+.text-hero-on {
+  transition: opacity 0.5s, scale 1s;
+  scale: 1;
+  opacity: 1;
+}
+
+.ref-hero {
+  transition: opacity 0.5s, transform 0.6s 0.4s;
+  opacity: 0;
+  text-align: right;
+  width: 100%;
+  transform: translatex(20rem);
+}
+.ref-hero-on {
+  transition: opacity 0.5s, transform 0.6s 0.4s;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.shifter * {
+  margin: 0;
 }
 
 .img-perfil {
@@ -308,6 +342,7 @@ a {
 
 .on {
   opacity: 1;
+  display: block;
 }
 
 #prev-button,
@@ -346,9 +381,20 @@ a {
   grid-area: contact;
   transition: scale 0.5s, color 0.5s;
 }
+
+.contact-conteiner > a:hover svg {
+  scale: 1.3;
+  transition: all 0.5s;
+}
+
+.contact-conteiner > a:hover p {
+  color: #6ecec2;
+  transition: all 0.5s;
+}
 .contact-conteiner {
   align-content: center;
   align-self: auto;
+  transition: all 0.5s;
 }
 .contact svg {
   height: 3.5rem;
@@ -356,17 +402,17 @@ a {
   transition: scale 0.5s;
 }
 
-.contact svg:hover {
+/* .contact svg:hover {
   scale: 1.3;
-}
+} */
 
-.contact p {
+/* .contact p {
   transition: color 0.3s;
 }
 
 .contact p:hover {
   color: #6ecec2;
-}
+} */
 .contact a {
   display: flex;
   gap: 2rem;
