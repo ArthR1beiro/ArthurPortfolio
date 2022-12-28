@@ -20,7 +20,7 @@ setInterval(function () {
     currentText++;
   }
   showText();
-}, 5000);
+}, 6500);
 
 let currentRef = 0;
 
@@ -41,4 +41,4 @@ setInterval(function () {
     currentRef++;
   }
   showRef();
-}, 5000);
+}, 6500);
