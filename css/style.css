@@ -302,7 +302,7 @@ a {
   display: flex;
   align-items: right;
   position: relative;
-  background: red;
+  background: rgba(13, 58, 141, 0.582);
 }
 
 .projects-conteiner img {
