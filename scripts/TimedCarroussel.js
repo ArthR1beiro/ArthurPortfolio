@@ -64,4 +64,4 @@ setInterval(function () {
     currentImg++;
   }
   showImg();
-}, 6500);
+}, 7000);
