@@ -157,7 +157,7 @@ a {
       hsl(206deg 67% 9%) 0%,
       transparent 100%
     ),
-    url(https://github.com/ArthR1beiro/ArthurPortfolio/blob/main/imagens/back.gif?raw=true);
+    url("https://raw.githubusercontent.com/ArthR1beiro/ArthurPortfolio/main/imagens/gifs/back.gif");
   height: 50rem;
   background-position: left center;
   background-repeat: no-repeat;
@@ -426,10 +426,10 @@ a {
 
 .logo div {
   width: 100%;
-  background: url("/imagens/gifs/cyber.gif");
+  background: url("https://raw.githubusercontent.com/ArthR1beiro/ArthurPortfolio/main/imagens/gifs/cyber.gif");
   background-size: cover;
   background-position: right bottom;
-  -webkit-mask-image: url("/imagens/logo/mascara.webp");
+  -webkit-mask-image: url("https://raw.githubusercontent.com/ArthR1beiro/ArthurPortfolio/main/imagens/logo/mask.webp");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   position: absolute;
