@@ -1,5 +1,6 @@
 const shifterText = document.querySelectorAll(".text-hero");
 const shifterRef = document.querySelectorAll(".ref-hero");
+const shifterImg = document.querySelectorAll(".img-mask");
 
 let currentText = 0;
 
@@ -41,4 +42,26 @@ setInterval(function () {
     currentRef++;
   }
   showRef();
+}, 6500);
+
+let currentImg = 0;
+
+shifterImg[currentImg].classList.add("img-mask-on");
+
+function hideImg() {
+  shifterImg.forEach((item) => item.classList.remove("img-mask-on"));
+}
+
+function showImg() {
+  shifterImg[currentImg].classList.add("img-mask-on");
+}
+
+setInterval(function () {
+  hideImg();
+  if (currentImg === shifterImg.length - 1) {
+    currentImg = 0;
+  } else {
+    currentImg++;
+  }
+  showImg();
 }, 6500);
