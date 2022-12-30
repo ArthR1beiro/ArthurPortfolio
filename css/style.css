@@ -33,6 +33,10 @@ h1 {
   font-size: 2rem;
   margin: 0 0 2rem 0;
 }
+
+h2 {
+  font-size: 1.8rem;
+}
 p {
   font-size: 1.6rem;
 }
@@ -295,31 +299,103 @@ a {
 
 .projects {
   grid-area: projects;
+  padding: 0 2rem 0 3rem;
+}
+.projects h1 {
+  padding: 2.5rem 5rem 0rem 5rem;
+  margin-bottom: 1.5rem;
+}
+.projects-flex {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.projects-text-conteiner {
+  text-align: justify;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.project-text {
+  position: absolute;
+  opacity: 0;
+  display: none;
+}
+
+.project-text-on {
+  opacity: 1;
+  display: block;
 }
 
 .projects-conteiner {
+  justify-self: right;
   height: 25rem;
-  display: flex;
-  align-items: right;
   position: relative;
-  background: rgba(13, 58, 141, 0.582);
 }
 
-.projects-conteiner img {
+.projects-conteiner > img {
   height: 100%;
-  position: absolute;
-  right: 0;
 }
 
 .projects-img-conteiner {
-  background-color: rgba(26, 86, 197, 0.616);
-  height: 15rem;
-  width: 23.6rem;
-  right: 5.3rem;
+  background-color: black;
+  height: 16rem;
+  width: 25.4rem;
+  left: 4.5rem;
   bottom: 8rem;
   position: absolute;
-  overflow: hidden;
-  pointer-events: none;
+}
+
+.projects-img-conteiner img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.projects-img-conteiner img:hover {
+  scale: 1.05;
+}
+
+.project-img {
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+.project-img-on {
+  display: block;
+  opacity: 1;
+}
+#project-prev-button,
+#project-next-button {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  cursor: pointer;
+  /* opacity: 0.5; */
+  transition: fill 1s, transform 0.5s;
+  background: transparent;
+  fill: #6ecec2;
+}
+#project-next-button {
+  position: absolute;
+  top: 28.2rem;
+  left: 22rem;
+}
+#project-prev-button {
+  transform: scale(-1);
+  position: absolute;
+  top: 28rem;
+}
+
+#project-prev-button:hover {
+  transform: scale(-1.5);
+}
+
+#project-next-button:hover {
+  transform: scale(1.5);
 }
 .arts {
   grid-area: arts;
