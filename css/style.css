@@ -320,12 +320,16 @@ a {
 .project-text {
   position: absolute;
   opacity: 0;
-  display: none;
+  transition: opacity 1s;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .project-text-on {
   opacity: 1;
   display: block;
+  z-index: 1;
+  pointer-events: all;
 }
 
 .projects-conteiner {
@@ -360,13 +364,17 @@ a {
 
 .project-img {
   position: absolute;
-  display: none;
   opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .project-img-on {
+  pointer-events: all;
   display: block;
   opacity: 1;
+  z-index: 1;
 }
 #project-prev-button,
 #project-next-button {
@@ -375,7 +383,7 @@ a {
   border: none;
   cursor: pointer;
   /* opacity: 0.5; */
-  transition: fill 1s, transform 0.5s;
+  transition: fill 0.5s, transform 0.5s;
   background: transparent;
   fill: #6ecec2;
 }
@@ -396,6 +404,21 @@ a {
 
 #project-next-button:hover {
   transform: scale(1.5);
+}
+
+.project-text h2 {
+  color: #6ecec2;
+}
+
+.project-text a > p {
+  transition: scale 0.5s;
+  padding: 1rem;
+  color: #6ecec2;
+  text-align: center;
+}
+
+.project-text a > p:hover {
+  scale: 1.1;
 }
 .arts {
   grid-area: arts;
@@ -521,6 +544,7 @@ a {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   position: absolute;
+  overflow: hidden;
 }
 
 .img-mask {

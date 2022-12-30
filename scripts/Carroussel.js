@@ -71,3 +71,86 @@ function prevSlider() {
 
 btnNext.addEventListener("click", nextSlider);
 btnPrev.addEventListener("click", prevSlider);
+
+const projectText = document.querySelectorAll(".project-text");
+const projectImg = document.querySelectorAll(".project-img");
+const projectBtnPrev = document.getElementById("project-prev-button");
+const projectBtnNext = document.getElementById("project-next-button");
+const projectBtnDesign = document.querySelectorAll(".project-button-design");
+
+console.log(btnDesign);
+
+const projectColors = [
+  "#6ECEC2",
+  "#E23D3E",
+  "#FFFFFF",
+  "#552175",
+  "#6ECEC2",
+  "#6ECEC2",
+];
+
+let currentState = 0;
+
+projectText[currentState].classList.add("project-text-on");
+
+projectBtnDesign.forEach((p) => {
+  p.style.fill = projectColors[currentState];
+});
+
+function hideProjectText() {
+  projectText.forEach((item) => item.classList.remove("project-text-on"));
+}
+
+function showProjectText() {
+  projectText[currentState].classList.add("project-text-on");
+}
+
+projectImg[currentState].classList.add("project-img-on");
+
+function hideProjectImg() {
+  projectImg.forEach((item) => item.classList.remove("project-img-on"));
+}
+
+function showProjectImg() {
+  projectImg[currentState].classList.add("project-img-on");
+}
+
+function nextState() {
+  hideProjectText();
+  hideProjectImg();
+  if (currentState === projectText.length - 1) {
+    currentState = 0;
+    projectBtnDesign.forEach((p) => {
+      p.style.fill = projectColors[currentState];
+    });
+  } else {
+    currentState++;
+
+    projectBtnDesign.forEach((p) => {
+      p.style.fill = projectColors[currentState];
+    });
+  }
+  showProjectText();
+  showProjectImg();
+}
+
+function prevState() {
+  hideProjectText();
+  hideProjectImg();
+  if (currentState === 0) {
+    currentState = projectText.length - 1;
+    projectBtnDesign.forEach((p) => {
+      p.style.fill = projectColors[currentState];
+    });
+  } else {
+    currentState--;
+    projectBtnDesign.forEach((p) => {
+      p.style.fill = projectColors[currentState];
+    });
+  }
+  showProjectImg();
+  showProjectText();
+}
+
+projectBtnNext.addEventListener("click", nextState);
+projectBtnPrev.addEventListener("click", prevState);
