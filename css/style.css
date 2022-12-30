@@ -421,7 +421,138 @@ a {
   scale: 1.1;
 }
 .arts {
+  overflow: hidden;
   grid-area: arts;
+  padding: 0 2rem;
+}
+.arts h1 {
+  padding: 2.5rem 5rem 0rem 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.arts-conteiner {
+  position: relative;
+  height: 31rem;
+  width: 100%;
+}
+
+.art-tooltiptext {
+  opacity: 1;
+  bottom: -2rem;
+  left: 50%;
+  transform: translate(-50%, -2rem);
+  color: white;
+  width: 15rem;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.art-tooltip:hover .art-tooltiptext {
+  visibility: visible;
+  opacity: 0;
+  transform: translate(-50%, 10rem);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.art1,
+.art2,
+.art3 {
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgb(110, 206, 194, 0.5);
+}
+
+.art1 {
+  position: absolute;
+  background: rgb(6, 3, 60);
+  background: linear-gradient(
+    45deg,
+    rgba(6, 3, 60, 0) 0%,
+    rgba(18, 8, 96, 0.5368522408963585) 91%
+  );
+  height: 13rem;
+  width: 13rem;
+  border-radius: 30% 70% 70% 30% / 30% 28% 72% 70%;
+}
+
+.art1 img {
+  height: 10rem;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  border-radius: 1rem;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border: 1px solid #6ecec2;
+}
+
+.art1 img:hover {
+  scale: 1.05;
+}
+
+.art2 {
+  position: absolute;
+  background: linear-gradient(
+    0deg,
+    rgba(6, 3, 60, 0) 0%,
+    rgba(18, 8, 96, 0.7553396358543417) 82%
+  );
+  height: 13rem;
+  width: 25rem;
+  top: 9rem;
+  left: 15rem;
+  border-radius: 26% 74% 25% 75% / 40% 29% 71% 60%;
+}
+
+.art2 img {
+  height: 20rem;
+  position: absolute;
+  left: 2rem;
+  top: 0rem;
+  border-radius: 1rem;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  filter: brightness(40%);
+}
+
+.art2 img:hover {
+  scale: 1.05;
+  filter: brightness(1);
+}
+
+.art3 {
+  position: absolute;
+
+  background: linear-gradient(
+    330deg,
+    rgba(6, 3, 60, 0) 0%,
+    rgba(18, 8, 96, 0.592874649859944) 82%
+  );
+  right: 0;
+  top: -5rem;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 30% 70% 70% 30% / 30% 28% 72% 70%;
+}
+
+.art3 img {
+  height: 16rem;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  border-radius: 1rem;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border: 1px solid #6ecec2;
+}
+
+.art3 img:hover {
+  scale: 1.05;
 }
 
 .design {
