@@ -78,7 +78,7 @@ a {
 .grid-conteiner1 {
   /* GRID */
   display: grid;
-  grid-template-rows: 34rem 19rem /* 30rem 30rem 10rem; */;
+  grid-template-rows: 34rem 19rem;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-bottom: 2em;
@@ -709,4 +709,111 @@ a {
 .footer {
   text-align: center;
   grid-area: footer;
+}
+
+@media screen and (max-width: 45rem) {
+  .grid-conteiner2,
+  .grid-conteiner3 {
+    display: none;
+  }
+  .vidro {
+    height: 100%;
+    width: 30rem;
+  }
+
+  .about {
+    display: block;
+  }
+  .grid-conteiner1 {
+    display: grid;
+    grid-template-rows: 63rem 50rem;
+    grid-template-columns: 1fr;
+    grid-gap: 7rem;
+    margin-bottom: 2rem;
+
+    grid-template-areas:
+      "about"
+      "curriculo"
+      "knowledge";
+  }
+
+  .about {
+    grid-area: about;
+    text-align: justify;
+  }
+
+  .about article {
+    align-items: center;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about a {
+    color: #6ecec2;
+  }
+
+  .curriculo {
+    text-align: left;
+    overflow: auto;
+    grid-area: curriculo;
+  }
+
+  .curriculo img {
+    width: 100%;
+    border-radius: 1rem;
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(1);
+  }
+
+  .curriculo img:hover {
+    transform: scale(1.05);
+  }
+
+  .icons-conteiner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .icons-conteiner img {
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .icons-conteiner img:hover {
+    transform: scale(1.2);
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    width: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-50%, 2.5rem);
+    color: white;
+    background: rgba(10, 34, 78, 0.582);
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 1.8rem);
+  }
 }
