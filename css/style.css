@@ -27,7 +27,6 @@ body {
   background-color: hsl(206deg 67% 9%);
   margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
 }
 
 h1 {
@@ -734,7 +733,10 @@ a {
   color: #6ecec2;
 }
 
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 40rem) {
+  * {
+    box-sizing: border-box;
+  }
   .ref-hero {
     transition: opacity 0.5s, transform 0.6s 0.4s;
     opacity: 0;
@@ -755,7 +757,9 @@ a {
 
   .vidro-grids {
     box-sizing: border-box;
-    max-width: 450px;
+    max-width: 40rem;
+    padding: 1rem;
+    border-radius: 2rem;
     margin: auto;
   }
   .vidro {
@@ -768,15 +772,11 @@ a {
     border-radius: 2rem;
   }
 
-  .about article {
-    width: 100%;
-  }
-
   .grid-conteiner1 {
     display: grid;
     grid-template-rows: 64rem 45rem;
     grid-template-columns: repeat(3, 12.26rem);
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     margin-bottom: 2rem;
 
     grid-template-areas:
@@ -789,6 +789,13 @@ a {
     flex-direction: column;
   }
 
+  .about {
+    width: 38rem;
+  }
+
+  .curriculo {
+    width: 24.5rem;
+  }
   .curriculo img {
     margin-bottom: 2rem;
   }
