@@ -709,6 +709,24 @@ a {
 .footer {
   text-align: center;
   grid-area: footer;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer a {
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footer a:hover {
+  color: #6ecec2;
+}
+
+.footer span {
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footer span:hover {
+  color: #6ecec2;
 }
 
 @media screen and (max-width: 45rem) {
