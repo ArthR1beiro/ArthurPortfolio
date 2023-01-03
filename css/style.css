@@ -27,6 +27,7 @@ body {
   background-color: hsl(206deg 67% 9%);
   margin: 0 auto;
   padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -237,6 +238,10 @@ a {
   border-radius: 1rem;
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   transform: scale(1);
+}
+
+.curriculo button {
+  display: none;
 }
 
 .curriculo img:hover {
@@ -730,73 +735,86 @@ a {
 }
 
 @media screen and (max-width: 45rem) {
+  .ref-hero {
+    transition: opacity 0.5s, transform 0.6s 0.4s;
+    opacity: 0;
+    text-align: right;
+    width: 100%;
+    transform: translatex(0rem);
+  }
+  .ref-hero-on {
+    transition: opacity 0.5s, transform 0.6s 0.4s;
+    opacity: 1;
+    transform: translatex(-2rem);
+  }
+
   .grid-conteiner2,
   .grid-conteiner3 {
     display: none;
   }
+
+  .vidro-grids {
+    box-sizing: border-box;
+    max-width: 450px;
+    margin: auto;
+  }
   .vidro {
-    height: 100%;
-    width: 30rem;
+    padding: 0;
   }
-
-  .about {
-    display: block;
-  }
-  .grid-conteiner1 {
-    display: grid;
-    grid-template-rows: 63rem 50rem;
-    grid-template-columns: 1fr;
-    grid-gap: 7rem;
-    margin-bottom: 2rem;
-
-    grid-template-areas:
-      "about"
-      "curriculo"
-      "knowledge";
-  }
-
-  .about {
-    grid-area: about;
-    text-align: justify;
+  .card {
+    padding: 2.5rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2rem;
   }
 
   .about article {
-    align-items: center;
-    gap: 4rem;
-    display: flex;
+    width: 100%;
+  }
+
+  .grid-conteiner1 {
+    display: grid;
+    grid-template-rows: 64rem 45rem;
+    grid-template-columns: repeat(3, 12.26rem);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+
+    grid-template-areas:
+      "about     about     about"
+      "knowledge curriculo curriculo"
+      "knowledge curriculo curriculo";
+  }
+
+  .about article {
     flex-direction: column;
   }
 
-  .about a {
-    color: #6ecec2;
-  }
-
-  .curriculo {
-    text-align: left;
-    overflow: auto;
-    grid-area: curriculo;
-  }
-
   .curriculo img {
-    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .curriculo button {
+    display: block;
+    background-color: #6ecec2;
+    border: 0;
     border-radius: 1rem;
-    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transform: scale(1);
+    padding: 1rem;
   }
 
-  .curriculo img:hover {
-    transform: scale(1.05);
+  .knowledge {
+    padding: 2.5rem 1rem;
   }
 
   .icons-conteiner {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    height: 95%;
   }
 
   .icons-conteiner img {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
