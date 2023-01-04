@@ -750,7 +750,6 @@ a {
     transform: translatex(-2rem);
   }
 
-  .grid-conteiner2,
   .grid-conteiner3 {
     display: none;
   }
@@ -777,7 +776,7 @@ a {
     grid-template-rows: 64rem 45rem;
     grid-template-columns: repeat(3, 12.26rem);
     grid-gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     grid-template-areas:
       "about     about     about"
@@ -858,5 +857,27 @@ a {
     visibility: visible;
     opacity: 1;
     transform: translate(-50%, 1.8rem);
+  }
+
+  .grid-conteiner2 {
+    display: grid;
+    grid-template-rows: 64rem 45rem;
+    grid-template-columns: repeat(3, 12.26rem);
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+
+    grid-template-areas:
+      "projects     projects     projects"
+      "arts         arts         arts";
+  }
+
+  .projects {
+    width: 38rem;
+    padding: 0;
+  }
+
+  .arts {
+    width: 38rem;
+    padding: 0;
   }
 }
