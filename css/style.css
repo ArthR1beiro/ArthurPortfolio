@@ -733,7 +733,10 @@ a {
   color: #6ecec2;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 39rem) {
+  :root {
+    --width: 37rem;
+  }
   * {
     box-sizing: border-box;
   }
@@ -756,7 +759,7 @@ a {
 
   .vidro-grids {
     box-sizing: border-box;
-    max-width: 40rem;
+    max-width: 39rem;
     padding: 1rem;
     border-radius: 2rem;
     margin: auto;
@@ -773,15 +776,15 @@ a {
 
   .grid-conteiner1 {
     display: grid;
-    grid-template-rows: 64rem 45rem;
-    grid-template-columns: repeat(3, 12.26rem);
+    grid-template-rows: 66.5rem 62rem 17rem;
+    grid-template-columns: 39rem;
     grid-gap: 1rem;
     margin-bottom: 1rem;
 
     grid-template-areas:
-      "about     about     about"
-      "knowledge curriculo curriculo"
-      "knowledge curriculo curriculo";
+      "about"
+      "curriculo"
+      "knowledge";
   }
 
   .about article {
@@ -789,11 +792,11 @@ a {
   }
 
   .about {
-    width: 38rem;
+    width: var(--width);
   }
 
   .curriculo {
-    width: 24.5rem;
+    width: var(--width);
   }
   .curriculo img {
     margin-bottom: 2rem;
@@ -808,14 +811,17 @@ a {
 
   .knowledge {
     padding: 2.5rem 1rem;
+    width: var(--width);
+  }
+
+  .knowledge h1 {
+    padding: 0 1rem 1rem 1rem;
   }
 
   .icons-conteiner {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 95%;
   }
 
   .icons-conteiner img {
@@ -846,7 +852,7 @@ a {
     color: white;
     background: rgba(10, 34, 78, 0.582);
     font-size: 1.2rem;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     font-weight: bold;
     transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
     position: absolute;
@@ -860,7 +866,7 @@ a {
   }
 
   .grid-conteiner2 {
-    display: grid;
+    display: none;
     grid-template-rows: 64rem 45rem;
     grid-template-columns: repeat(3, 12.26rem);
     grid-gap: 1rem;
@@ -872,12 +878,12 @@ a {
   }
 
   .projects {
-    width: 38rem;
+    width: var(--width);
     padding: 0;
   }
 
   .arts {
-    width: 38rem;
+    width: var(--width);
     padding: 0;
   }
 }
