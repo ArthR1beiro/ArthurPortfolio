@@ -734,27 +734,14 @@ a {
 }
 
 @media screen and (max-width: 39rem) {
-  :root {
-    --width: 37rem;
-  }
   * {
     box-sizing: border-box;
   }
   .ref-hero {
-    transition: opacity 0.5s, transform 0.6s 0.4s;
-    opacity: 0;
-    text-align: right;
-    width: 100%;
     transform: translatex(0rem);
   }
   .ref-hero-on {
-    transition: opacity 0.5s, transform 0.6s 0.4s;
-    opacity: 1;
     transform: translatex(-2rem);
-  }
-
-  .grid-conteiner3 {
-    display: none;
   }
 
   .vidro-grids {
@@ -764,9 +751,7 @@ a {
     border-radius: 2rem;
     margin: auto;
   }
-  .vidro {
-    padding: 0;
-  }
+
   .card {
     padding: 2.5rem 2rem;
     width: 100%;
@@ -776,8 +761,8 @@ a {
 
   .grid-conteiner1 {
     display: grid;
-    grid-template-rows: 66.5rem 62rem 17rem;
-    grid-template-columns: 39rem;
+    grid-template-rows: 66.5rem 62.5rem 17rem;
+    grid-template-columns: 37rem;
     grid-gap: 1rem;
     margin-bottom: 1rem;
 
@@ -791,13 +776,6 @@ a {
     flex-direction: column;
   }
 
-  .about {
-    width: var(--width);
-  }
-
-  .curriculo {
-    width: var(--width);
-  }
   .curriculo img {
     margin-bottom: 2rem;
   }
@@ -811,7 +789,6 @@ a {
 
   .knowledge {
     padding: 2.5rem 1rem;
-    width: var(--width);
   }
 
   .knowledge h1 {
@@ -827,63 +804,69 @@ a {
   .icons-conteiner img {
     width: 5rem;
     height: 5rem;
-    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .icons-conteiner img:hover {
     transform: scale(1.2);
   }
 
-  .tooltip {
-    position: relative;
-    display: inline-block;
-    width: 7.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .tooltiptext {
-    visibility: hidden;
-    opacity: 0;
-    bottom: -2rem;
-    left: 50%;
-    transform: translate(-50%, 2.5rem);
-    color: white;
-    background: rgba(10, 34, 78, 0.582);
-    font-size: 1.2rem;
     padding: 0.5rem 1rem;
-    font-weight: bold;
-    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-    position: absolute;
-    z-index: 1;
-  }
-
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 1.8rem);
   }
 
   .grid-conteiner2 {
-    display: none;
+    display: grid;
     grid-template-rows: 64rem 45rem;
-    grid-template-columns: repeat(3, 12.26rem);
+    grid-template-columns: 37rem;
     grid-gap: 1rem;
     margin-bottom: 1rem;
 
     grid-template-areas:
-      "projects     projects     projects"
-      "arts         arts         arts";
+      "projects"
+      "arts";
   }
 
   .projects {
-    width: var(--width);
-    padding: 0;
   }
 
   .arts {
-    width: var(--width);
-    padding: 0;
+  }
+
+  .grid-conteiner3 {
+    display: grid;
+    grid-template-rows: 64rem 45rem;
+    grid-template-columns: 37rem;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+
+    grid-template-areas:
+      "design"
+      "contact"
+      "logo"
+      "footer";
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .img-mask {
+    object-fit: cover;
+    object-position: center;
+    left: 1rem;
+    bottom: 2rem;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 5s;
+  }
+
+  .img-mask-on {
+    object-fit: cover;
+    object-position: center;
+    left: 1rem;
+    bottom: 2rem;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 5s;
   }
 }
