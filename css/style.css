@@ -834,7 +834,7 @@ a {
 
   .grid-conteiner3 {
     display: grid;
-    grid-template-rows: 64rem 45rem;
+    grid-template-rows: 64rem 35rem;
     grid-template-columns: 37rem;
     grid-gap: 1rem;
     margin-bottom: 1rem;
@@ -868,5 +868,10 @@ a {
     position: absolute;
     opacity: 1;
     transition: opacity 5s;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
   }
 }
