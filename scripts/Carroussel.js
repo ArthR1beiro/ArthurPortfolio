@@ -12,6 +12,7 @@ const colors = [
   "#FFFFFF",
   "#6ECEC2",
   "#F8A52B",
+  "#F8F44B",
 ];
 
 // background: rgba(20, 36, 65, 0.315);
