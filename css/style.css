@@ -761,7 +761,7 @@ a {
 
   .grid-conteiner1 {
     display: grid;
-    grid-template-rows: 66.5rem 62.5rem 17rem;
+    grid-template-rows: 1fr 62.5rem 17rem;
     grid-template-columns: 37rem;
     grid-gap: 1rem;
     margin-bottom: 1rem;
@@ -774,6 +774,7 @@ a {
 
   .about article {
     flex-direction: column;
+    overflow: auto;
   }
 
   .curriculo img {
