@@ -415,14 +415,14 @@ a {
 }
 
 .project-text a > p {
-  transition: scale 0.5s;
+  transition: scale 0.3s;
   padding: 1rem;
   color: #6ecec2;
   text-align: center;
 }
 
 .project-text a > p:hover {
-  scale: 1.1;
+  scale: 1.05;
 }
 .arts {
   overflow: hidden;
@@ -816,7 +816,7 @@ a {
 
   .grid-conteiner2 {
     display: grid;
-    grid-template-rows: 64rem 45rem;
+    grid-template-rows: 57rem 45rem;
     grid-template-columns: 37rem;
     grid-gap: 1rem;
     margin-bottom: 1rem;
@@ -826,7 +826,78 @@ a {
       "arts";
   }
 
-  .projects {
+  .projects h1 {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+
+  .projects-flex {
+    flex-direction: column;
+  }
+
+  .projects-conteiner {
+    justify-self: bottom;
+    height: 24rem;
+    top: 20rem;
+  }
+
+  .projects-img-conteiner {
+    height: 16rem;
+    width: 24.6rem;
+    left: 4.2rem;
+    bottom: 7rem;
+  }
+
+  .projects-img-conteiner img:hover {
+    scale: 1;
+    filter: brightness(1);
+  }
+
+  #project-prev-button,
+  #project-next-button {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    cursor: pointer;
+    /* opacity: 0.5; */
+    transition: fill 0.5s, filter 0.5s;
+    background: transparent;
+    fill: #6ecec2;
+    z-index: 2;
+  }
+  #project-next-button {
+    position: absolute;
+    top: 25.2rem;
+    left: 31rem;
+  }
+  #project-prev-button {
+    transform: scale(-1);
+    position: absolute;
+    top: 25rem;
+  }
+
+  #project-prev-button:hover {
+    transform: scale(-1);
+    filter: brightness(1);
+  }
+
+  #project-next-button:hover {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+  .project-text h2 {
+    color: #6ecec2;
+  }
+
+  .project-text a > p {
+    transition: scale 0.5s;
+    padding: 1rem;
+    color: #6ecec2;
+    text-align: center;
+  }
+
+  .project-text a > p:hover {
+    scale: 1.1;
   }
 
   .arts h1 {
