@@ -829,7 +829,13 @@ a {
   .projects {
   }
 
-  .arts {
+  .arts h1 {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+
+  .art2 {
+    top: 16rem;
+    left: 4rem;
   }
 
   .grid-conteiner3 {
@@ -887,5 +893,10 @@ a {
   .footer {
     display: flex;
     flex-direction: column;
+  }
+
+  .footer a,
+  .footer span {
+    color: #6ecec2;
   }
 }
