@@ -1077,20 +1077,25 @@ a {
 
   .projects-conteiner {
     justify-self: bottom;
-    height: 24rem;
+    height: 22rem;
     top: 20rem;
   }
 
   .projects-img-conteiner {
-    height: 16rem;
-    width: 24.6rem;
-    left: 4.2rem;
+    height: 14.3rem;
+    width: 22.3rem;
+    left: 4rem;
     bottom: 7rem;
   }
 
   .projects-img-conteiner img:hover {
     scale: 1;
     filter: brightness(1);
+  }
+
+  .project-img .project-img-on {
+    height: 100%;
+    width: 100%;
   }
 
   #project-prev-button,
@@ -1108,7 +1113,7 @@ a {
   #project-next-button {
     position: absolute;
     top: 25.2rem;
-    left: 31rem;
+    left: 28.2rem;
   }
   #project-prev-button {
     transform: scale(-1);
@@ -1147,7 +1152,11 @@ a {
 
   .art2 {
     top: 16rem;
-    left: 4rem;
+    left: 2rem;
+  }
+
+  .art3 img {
+    height: 15rem;
   }
 
   .grid-conteiner3 {
