@@ -8,10 +8,9 @@
 ## Conteudo
 
 - [A Ideia](#a-ideia)
+- [Funcionalidades](#funcionalidades)
 - [Avaliable in](#disponivel-em)
-- [Funcionalidades](#funcionalidades)
 - [Linguagens e ferramentas](#linguagens-e-ferramentas)
-- [Funcionalidades](#funcionalidades)
 - [Autores](#autores)
 
 ## A ideia
