@@ -17,16 +17,16 @@
 Desenvolvimento de um portifolio cuja demonstre altas tecnicas de frontend e design combinadas para entregar ao usuario uma experiencia agradavel ao conferir minhas habilidades.
 
 ## Funcionalidades
-# Javascript
+### Javascript
 Com conhecimento basico em Javascript integrei à pagina a funcionalidade de carrosséis de textos e imagens que são trigados por interação do usuario via mouse ou por tempo. Tambem foi implementado um sistema que ilumina os cards da pagina com base na posição do ponteiro do mouse.
 
-# HTML/CSS
+### HTML/CSS
 - Grids
 - Animações
 - Mascaras
 - Responsividade
 
-# Animação
+### Animação
 Criado uma animação no software Flash Macromedia 8 para a logo demonstrando habilidade na area.
 
 ## Disponivel em
