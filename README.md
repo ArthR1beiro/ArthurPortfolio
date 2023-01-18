@@ -9,7 +9,7 @@
 
 - [A Ideia](#a-ideia)
 - [Funcionalidades](#funcionalidades)
-- [Avaliable in](#disponivel-em)
+- [Disponivel-em](#disponivel-em)
 - [Linguagens e ferramentas](#linguagens-e-ferramentas)
 - [Autores](#autores)
 
