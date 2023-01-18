@@ -5,11 +5,11 @@
 
 </div>
 
-## Conteudo
+## Conteúdo
 
 - [A Ideia](#a-ideia)
 - [Funcionalidades](#funcionalidades)
-- [Disponivel-em](#disponivel-em)
+- [Disponivel em](#disponivel-em)
 - [Linguagens e ferramentas](#linguagens-e-ferramentas)
 - [Autores](#autores)
 
