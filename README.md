@@ -1,6 +1,6 @@
 <div align="center" style="margin: 20px; text-align: center">
 
-<h1>Arthur's Portifolio</h1>
+<h1>Arthur's Portfolio</h1>
 
 
 </div>
